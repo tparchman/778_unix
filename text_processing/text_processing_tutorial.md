@@ -33,6 +33,13 @@ Now, increase the number of random numbers until you get to a number of replicat
 
 The ampersand (&) will cause the job to run in the background. Thus, you will have the normal prompt back in your terminal window, and closing it will not affect the job.  
 
+You can use `top` or `ps` to identify the process number of the `jot` job in oder to kill it. If you use `top`, you can find the job in the list. The `ps` command will return a list of job ids running by the user:
+
+    $ ps
+
+After you identify the job id (e.g., 77654), you can stop it:
+
+    $ kill 77564
 
 # I. Unix text processing 
 
@@ -82,6 +89,7 @@ Redirection of `ls -lh` below simply sends all that information on files in the 
     $ ls -lh > directory_contents.txt
 
 
+## Extracting and sorting (`cut`, `sort`, `uniq`)
 
 ## Regular expressions and text extraction with `grep`
 
