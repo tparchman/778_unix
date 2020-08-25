@@ -1,5 +1,6 @@
-# II. Basic process monitoring and control
+# I. Basic process monitoring and control
 
+## Process monitoring with `top`, killing jobs
 `top` will display information on processes running on the machine you are logged into. Try it, read the output carefully. Doesnt matter what directory you call it from.
 
     $ top
@@ -8,9 +9,8 @@
 
     $ ps
 
-If you have mutliple processes running, and want to kill one, use `kill` followed by the process ID, which you can locate with `top` or `ps`
+If you have mutliple processes running, and want to kill one, use `kill` followed by the process ID, which you can locate with `top` or `ps`, e.g.:
 
-Lets use a simple Unix tool, `jot`
     $ kill 9031
 
 If you have a job running in the shell that isnt doing what you want, you can easily kill from the terminal with "ctrl c". You can also temporarily kill it with "ctrl z", and then restart it in the background with `bg` typed at the prompt with no additional arguments necessary.
@@ -19,7 +19,20 @@ If you are calling a command that is going to take some time, and you dont want 
 
     $ cat *fastq > allgenomefiles.fastq &
 
-# JOT
+## Practice running a program, running it in the background, and stopping it (in other words, job control)
+
+`jot` is a little program that can generate strings of numbers, among other things (have a look at the `jot` `man` page). Try the following command which will print 100 random numbers:
+
+    $ jot -r 100
+
+You will notice that this command will print 100 numbers to the screen. 
+
+Now, increase the number of random numbers until you get to a number of replicates (think millions or more) that takes your computer an appreciable amount of time to complete. If you made the number large enough, you’ve probably noticed that you can’t do anything else with your Terminal window while it’s busy working on your command. Use ^c to stop it printing to that file, and then execute the commands again with an “&” at the end:
+
+    $ jot -r 1000000000 > test.txt &
+
+The ampersand (&) will cause the job to run in the background. Thus, you will have the normal prompt back in your terminal window, and closing it will not affect the job.  
+
 
 # I. Unix text processing 
 
@@ -68,35 +81,42 @@ Redirection of `ls -lh` below simply sends all that information on files in the 
 
     $ ls -lh > directory_contents.txt
 
-The use of `grep` below will send all lines containing a match to "BS_1287" to a new file.
-
-    $ grep "BS_1287" data_all_inds.txt > data_for_ind_BS1287.txt
 
 
-## `grep`: powerful regular expression engine
-`grep`is among the most widely used Unix commands in data science.
+## Regular expressions and text extraction with `grep`
 
-
-## regular expressions and text extraction with `grep`
-
-You had a subtle introduction to `grep` last week. You can explore the examples below using sample_passerina.fastq, available under week1 on the [course github page](https://github.com/tparchman/BIOL792). This is an increbily versatile command, so we better learn more. In it simplest invocation, `grep` with output every line in a file that matches the specified pattern.
+`grep` is among the most widely used Unix commands in data science. You can explore the examples below using sample_passerina.fastq, available under the [unix text processing github page](https://github.com/tparchman/778_unix/tree/master/text_processing). This is an increbily versatile command, so we better learn more. In it simplest invocation, `grep` with output every line in a file that matches the specified pattern.
 
 Since fastq files have a standard four line format (ID starting with @, DNA sequence, quality id starting with +, and quality score), we know that every sequence has a line starting with @ associated with it. 
 
-We could write all of teh ID lines to a separate file:
+We could write all of the ID lines to a separate file:
 
-$ grep "^@" -c sample_passerina.fastq > idlines.txt
+    $ grep "^@" -c sample_passerina.fastq > idlines.txt
 
 We can cound the number of sequences:
 
-$ grep "^@" -c sample_passerina.fastq
+    $ grep "^@" -c sample_passerina.fastq
 
 We can print the line with a match, plus any number of lines following it:
 
-grep "^@" -A 1 sample_passerina.fastq
+    $ grep "^@" -A 1 sample_passerina.fastq
 
 SDN_AM_43432 is the ID of a specific bird represented in this data set. How many DNA sequences do we have for this bird?
 
-$ grep "SDN_AM_43432" -c sample_passerina.fastq
+    $ grep "SDN_AM_43432" -c sample_passerina.fastq
+
+Have a look at the `man` page for `grep`, `tr`, and `wc`, and try some of thse additional commands that make use of pipes and redirection
+
+In addition, you will want to learn what the `tr` command does.
+
+    $ grep ^@ sample_passerina.fastq | wc -l   
+
+    $ grep ^@ sample_passerina.fastq | grep “NVP_CY_48147” > NVP_CY.txt
+
+    $ grep ^[ATCG] sample_passerina.fastq | wc –l
+
+    $ grep ^[ATCG] sample_passerina.fastq | tr ‘T’ ‘U’ | less
+
+    $ grep ^[ATCG] sample_passerina.fastq | tr ‘T’ ‘U’ | head –n 20 > first20seqs_transliterated.txt
 
 
