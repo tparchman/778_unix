@@ -9,7 +9,7 @@
 
     $ ps
 
-`ps aux` will show all active processes. 
+`ps aux` will show all active processes. Here `a`, `u`, and `x` are separate command line arguments, see `man ps` for details.
 
     $ ps aux
 
@@ -57,6 +57,7 @@ After you identify the job id (e.g., 77654), you can stop it:
 - redirection (>,>>) and pipes (|)
 - quick tricks: `cut`, `sort`, `uniq`
 - pattern matching and extraction: `grep`
+- files needed: sample_passerina.fastq.gz from [unix_text_processing github page](https://github.com/tparchman/778_unix/tree/master/text_processing)
 
 ## 1. Compression and decompression using gzip and gunzip
 
@@ -113,9 +114,9 @@ Since fastq files have a standard four line format (ID starting with @, DNA sequ
 
 We could write all of the ID lines to a separate file:
 
-    $ grep "^@" -c sample_passerina.fastq > idlines.txt
+    $ grep "^@" ample_passerina.fastq > idlines.txt
 
-We can cound the number of sequences:
+We can count the number of sequences in the file:
 
     $ grep "^@" -c sample_passerina.fastq
 
