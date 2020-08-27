@@ -9,6 +9,14 @@
 
     $ ps
 
+`ps aux` will show all active processes. 
+
+    $ ps aux
+
+`ps aux | grep [search expression]` will pipe processes listed as above into `grep`, and can be used to locate PIDs for specific applications. For example, the below command should retrieve information on processes running associated with TextWrangler.
+
+    $ ps aux | grep TextWrangler
+
 If you have mutliple processes running, and want to kill one, use `kill` followed by the process ID, which you can locate with `top` or `ps`, e.g.:
 
     $ kill 90312
