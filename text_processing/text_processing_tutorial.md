@@ -1,7 +1,7 @@
 # I. Basic process monitoring and control
 
 ## 1. Process monitoring with `top`, killing jobs
-`top` will display information on processes running on the machine you are logged into. Try it, read the output carefully. Doesnt matter what directory you call it from.
+`top` will display information on processes running on the machine you are logged into. Try it, read the output carefully. Doesn't matter what directory you call it from.
 
     $ top
 
@@ -27,7 +27,7 @@ If you are calling a command that is going to take some time, and you dont want 
 
 You will notice that this command will print 100 numbers to the screen. 
 
-Now, increase the number of random numbers until you get to a number of replicates (think millions or more) that takes your computer an appreciable amount of time to complete. If you made the number large enough, you’ve probably noticed that you can’t do anything else with your Terminal window while it’s busy working on your command. Use ^c to stop it printing to that file, and then execute the commands again with an “&” at the end:
+Now, increase the number of random numbers until you get to a number of replicates (think millions or more) that takes your computer an appreciable amount of time to complete. If you made the number large enough, you’ve probably noticed that you can’t do anything else with your terminal window while it’s busy working on your command. Use ^c to stop it printing to that file, and then execute the commands again with an “&” at the end:
 
     $ jot -r 1000000000 > test.txt &
 
