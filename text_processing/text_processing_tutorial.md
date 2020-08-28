@@ -220,7 +220,7 @@ Convert the .sh shell script to write for all users.
 
     $ chmod a+w rsync_mirror_laptop.sh
 
-This script can then be executed from the currently directory:
+This script can then be executed from the current directory:
 
     $ ./rsync_mirror_laptop.sh
 
