@@ -1,7 +1,7 @@
 # I. Basic process monitoring and control
 
 ## 1. Process monitoring with `top`, killing jobs
-`top` will display information on processes running on the machine you are logged into. Try it, read the output carefully. Doesn't matter what directory you call it from.
+`top` will display information on processes running on the machine you are logged into. Try it, read the output carefully.
 
     $ top
 
@@ -13,9 +13,11 @@
 
     $ ps aux
 
-`ps aux | grep [search expression]` will pipe processes listed as above into `grep`, and can be used to locate PIDs for specific applications. For example, the below command should retrieve information on processes running associated with TextWrangler.
+`ps aux | grep [search expression]` will pipe processes listed as above into `grep`, and can be used to locate PIDs for specific applications, users, etc. For example, the below command should retrieve information on processes running associated with TextWrangler.
 
     $ ps aux | grep TextWrangler
+
+    $ ps aux | grep tparchman
 
 If you have mutliple processes running, and want to kill one, use `kill` followed by the process ID, which you can locate with `top` or `ps`, e.g.:
 
@@ -49,7 +51,7 @@ After you identify the job id (e.g., 77654), you can stop it:
 
     $ kill 77564
 
-# I. Unix text processing 
+# II. Unix text processing 
 
 ## Topics to cover
 
@@ -57,7 +59,7 @@ After you identify the job id (e.g., 77654), you can stop it:
 - redirection (>,>>) and pipes (|)
 - quick tricks: `cut`, `sort`, `uniq`
 - pattern matching and extraction: `grep`
-- files needed: sample_passerina.fastq.gz from [unix_text_processing github page](https://github.com/tparchman/778_unix/tree/master/text_processing)
+- files needed: `sample_passerina.fastq.gz`, and `yeast_genome.gff` from [unix_text_processing github page](https://github.com/tparchman/778_unix/tree/master/text_processing)
 
 ## 1. Compression and decompression using gzip and gunzip
 
@@ -102,17 +104,20 @@ The use of `>>` below will write (append) the contents of newdata.txt to the end
 
 ## 3. Extracting fields and sorting (`cut`, `sort`, `uniq`)
 
-Some useful Unix commands to familiarize yourself with:
+Some useful Unix commands for extracting and organizing information from text, using the yeast_genome.gff file in the [github text_processing page](https://github.com/tparchman/778_unix/tree/master/text_processing).
 
-`cut`: can be used to extract fields from files after specifying the delimiter and fields. For example, the command below will extract fields 1-3 from the file `yeast_genome.gff`. In this case the delimiter, which is `tab`, is detected by default. 
+`cut`: can be used to extract fields (similar to columns in a data frame) from files. For example, the command below will extract fields 3-5 from the file `yeast_genome.gff`. In this case the delimiter, which is `tab`, is detected by default (delimiter can be specified with `d` option). 
 
-    $ cut -f 1-3 yeast_genome.gff > feature_info.txt
+    $ cut -f 3-5 yeast_genome.gff > feature_info.txt
 
-`sort` will sort lines
+
+`sort` will sort lines. The action above extracted information on annotated features in the yeast genome and their coordinates. Try the below use of `sort` and inspect the output.
 
     $ sort feature_info.text > sorted_feature_info.txt
 
-`uniq` will output the unique lines in a file. Below, we use `cut`
+`uniq` will output the unique lines in a file. Lets say we just wanted a list of the categories of genomic features represented in the yeast_genome.gff file (contained in field 3). Note what happens if you pipe the output of `cut` straight into `uniq` without using `sort`.
+
+    $ cut -f 3 yeast_genome.gff | sort | uniq
 
 
 Use examples from Haddock and Dunn Chapter 16
@@ -124,7 +129,7 @@ Since fastq files have a standard four line format (ID starting with @, DNA sequ
 
 We could write all of the ID lines to a separate file:
 
-    $ grep "^@" ample_passerina.fastq > idlines.txt
+    $ grep "^@" sample_passerina.fastq > idlines.txt
 
 We can count the number of sequences in the file:
 
@@ -219,4 +224,40 @@ This script can then be executed from the currently directory:
 
     $ ./rsync_mirror_laptop.sh
 
-## 1. Permissions
+## 2. Package installation
+
+**A. Linux distributions:**
+
+`apt` is a package management system for most Linux distributions. It facilitates the installation, management, updates, and removal of software. 
+
+You can find useful tutorials on `apt` and `apt-get` below. We suggest reviewing information, and familiarizing yourself with `sudo` carefully before using.
+
+- https://phoenixnap.com/kb/how-to-use-apt-get-commands
+- https://itsfoss.com/apt-get-linux-guide/
+- https://www.control-escape.com/linux/lx-swinstall.html
+
+
+To install software using `apt-get`:
+
+    $ sudo apt-get install <package_name>
+
+To remove software using `apt-get`:
+
+    $ sudo apt-get remove <package_name> 
+
+Note, the above doesnt remove configuration files associated with a package. To remove the package along and configuration files:
+
+    $ sudo apt-get purge <package_name> 
+
+
+**B. Unix on Mac systems**
+
+`homebrew` and `fink` are each capable of managing and installing packages on Unix running on the Mac OS. Some basic tutorials can be found below. As with the above, carefully review before using.
+
+Fink:
+- https://www.finkproject.org/doc/install/install-first.php?phpLang=en
+
+
+Homebrew:
+
+- https://www.howtogeek.com/211541/homebrew-for-os-x-easily-installs-desktop-apps-and-terminal-utilities/
