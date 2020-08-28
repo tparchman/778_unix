@@ -100,12 +100,22 @@ The use of `>>` below will write (append) the contents of newdata.txt to the end
     $ cat newdata.txt >> all_data_in_directory.txt
 
 
-
-
 ## 3. Extracting fields and sorting (`cut`, `sort`, `uniq`)
 
-Use examples from Haddock and Dunn Chapter 16
+Some useful Unix commands to familiarize yourself with:
 
+`cut`: can be used to extract fields from files after specifying the delimiter and fields. For example, the command below will extract fields 1-3 from the file `yeast_genome.gff`. In this case the delimiter, which is `tab`, is detected by default. 
+
+    $ cut -f 1-3 yeast_genome.gff > feature_info.txt
+
+`sort` will sort lines
+
+    $ sort feature_info.text > sorted_feature_info.txt
+
+`uniq` will output the unique lines in a file. Below, we use `cut`
+
+
+Use examples from Haddock and Dunn Chapter 16
 ## 4. Regular expressions and text processing with `grep`
 
 `grep` is a regular expression workhorse, and is among the most widely used Unix commands in data science. You can explore the examples below using sample_passerina.fastq, available under the [unix text processing github page](https://github.com/tparchman/778_unix/tree/master/text_processing). This is an increbily versatile command, so we better learn more. In it simplest invocation, `grep` with output every line in a file that matches the specified pattern.
@@ -141,6 +151,7 @@ In addition, you will want to learn what the `tr` command does.
     $ grep ^[ATCG] sample_passerina.fastq | tr ‘T’ ‘U’ | less
 
     $ grep ^[ATCG] sample_passerina.fastq | tr ‘T’ ‘U’ | head –n 20 > first20seqs_transliterated.txt
+
 
 
 # III. Permissions, package installation
