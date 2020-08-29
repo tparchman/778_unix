@@ -5,3 +5,5 @@
 ### Morning Session Agenda
 
 ### Afternoon Agenda
+
+### Points for Module Credit
