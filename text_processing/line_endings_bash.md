@@ -5,11 +5,11 @@
 
 As Unix commands, and many scripting languages, often entail processing one line at a time, line ending format  matters. `Unix` uses `\n`, Mac uses `\r`, and Microsoft uses `\r\n`. For working in Unix , files ideally would have `\n` line endings. Indeed, you will find that improper line endings will repeatedly cause you headaches with Unix, Python and Perl scripting. 
 
-Use `less` to take a look at `grouse_barcodes.csv`, which can be downloaded from the [text processing github](https://github.com/tparchman/778_unix) directory.  This file should contain three columns of information separated by commas, but you'll notice that all of the information appears on a single line, and the highlighted symbol `^M`. In Unix speak, this is actually `\r`, but simply displays as `^M` in `less`. There are two ways that you can easily change the line endings of this file.
+Use `less` to take a look at `grouse_barcodes.csv`, which can be downloaded from the [778 Unix github](https://github.com/tparchman/778_unix) directory.  This file should contain three columns of information separated by commas, but you'll notice that all of the information appears on a single line, and the highlighted symbol `^M`. In Unix speak, this is actually `\r`, but simply displays as `^M` in `less`. There are two ways that you can easily change the line endings of this file.
 
-You could open the file in `Text Wrangler` (or a similar editor) to examine. At the bottom of the window, you will see toolbar reading `Legacy Mac OS (CR)`, which identifies the line ending format for the file. You can click that menu, change the line endings to `Unix (LF)`, and save the file, you should be good to go. Yet, this is cumbersome. 
+You could open the file in `Text Wrangler` (or a similar editor) to examine. At the bottom of the window, you will see toolbar reading `Legacy Mac OS (CR)`, which identifies the line ending format for the file. You can click that menu, change the line endings to `Unix (LF)`, and save the file, you should be good to go. Other text editors have similar capability. Yet, this is cumbersome. 
 
-**Writing a more useful bash script**
+**Writing a bash script to alter line endings**
 
 You could easily write a bash script to convert mac line endings (`\r`; or Windows `\r\n`) to Unix (`\n`).  You can simply use `tr`  to do this (`sed` could also work), but instead of just executing this from the command line, you will have written a shell script that can be used to do this repeatedly. 
 

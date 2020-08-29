@@ -55,13 +55,13 @@ After you identify the job id (e.g., 77654), you can stop it:
 
 ## Topics to cover
 
-- compression, decompression
-- redirection (>,>>) and pipes (|)
+- compression, decompression (`gzip`)
+- redirection (`>`,`>>`) and pipes (`|`)
 - quick tricks: `cut`, `sort`, `uniq`
 - pattern matching and extraction: `grep`
 - files needed: `sample_passerina.fastq.gz`, and `yeast_genome.gff` from [unix_text_processing github page](https://github.com/tparchman/778_unix/tree/master/text_processing)
 
-## 1. Compression and decompression using gzip and gunzip
+## 1. Compression and decompression using `gzip` and `gunzip`
 
 Compression and de-compression are regular activities associated with large text data files, so get comfortable with it. `gzip` is a command for compressing and decompressing files. Download sample_passerina.fastq.gz from [unix_text_processing github page](https://github.com/tparchman/778_unix/tree/master/text_processing), and put it in a directory you can easily work in for the below examples.
 
