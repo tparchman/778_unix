@@ -1,4 +1,8 @@
 # I. Basic process monitoring and control
+## Topics to cover
+- monitoring processes, identifying process ids
+- running jobs in the background
+- killing jobs
 
 ## 1. Process monitoring with `top`, killing jobs
 `top` will display information on processes running on the machine you are logged into. Try it, read the output carefully.
@@ -100,6 +104,15 @@ The below command will concatenate the data from all files in a directory ending
 The use of `>>` below will write (append) the contents of newdata.txt to the end of all_data_in_directory.
 
     $ cat newdata.txt >> all_data_in_directory.txt
+
+**Pipes** (`|`), are used to send stdout from a command directly as input into another. Lets say you have DNA sequence data from a large number of individuals, all in separate .fastq files, in a project directory. To be sure of your sample size, you may want to count the number of files in that directory. Below, `ls` would normally send directory information to stdout. Here we are piping that output directly into `wc -l` which will count the number of lines, which will represent the number of files.
+
+    $ ls | wc -l
+
+Pipes are obviously useful to send output from one Unix command to another, yet the above examples only use a single `|`. In fact, many bioinformatic "pipelines" are actually built from strings on Unix commands piped into one another. The example below does something real and useful:
+
+    $ samtools mpileup -P ILLUMINA --BCF --max-depth 100 --adjust-MQ 50 --min-BQ 18 --min-MQ 18 --skip-indels --output-tags DP,AD --fasta-ref buckwheat_ref.fasta aln*sorted.bam | bcftools call -m --variants-only --format-fields GQ --skip-variants indels | bcftools filter --set-GTs . -i 'QUAL > 19 && FMT/GQ >9' | bcftools view -m 2 -M 2 -v snps --apply-filter "PASS" --output-type v --output-file variants_rawfiltered_12JULY18.vcf  &
+
 
 
 ## 3. Extracting fields and sorting (`cut`, `sort`, `uniq`)
