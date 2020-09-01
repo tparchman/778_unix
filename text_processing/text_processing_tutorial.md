@@ -109,11 +109,9 @@ The use of `>>` below will write (append) the contents of newdata.txt to the end
 
     $ ls | wc -l
 
-Pipes are obviously useful to send output from one Unix command to another, yet the above examples only use a single `|`. In fact, many bioinformatic "pipelines" are actually built from strings on Unix commands piped into one another. The example below does something real and useful:
+ Above is obviously an overly simple use. In fact, many data science "pipelines" are actually built from strings on Unix commands piped into one another. The example below does something real and useful:
 
     $ samtools mpileup -P ILLUMINA --BCF --max-depth 100 --adjust-MQ 50 --min-BQ 18 --min-MQ 18 --skip-indels --output-tags DP,AD --fasta-ref buckwheat_ref.fasta aln*sorted.bam | bcftools call -m --variants-only --format-fields GQ --skip-variants indels | bcftools filter --set-GTs . -i 'QUAL > 19 && FMT/GQ >9' | bcftools view -m 2 -M 2 -v snps --apply-filter "PASS" --output-type v --output-file variants_rawfiltered_12JULY18.vcf  &
-
-
 
 ## 3. Extracting fields and sorting (`cut`, `sort`, `uniq`)
 
