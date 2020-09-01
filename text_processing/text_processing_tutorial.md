@@ -4,6 +4,14 @@
 - running jobs in the background
 - killing jobs
 
+## Useful resources under 
+- [extra_resources_unix](https://github.com/tparchman/778_unix/tree/master/extra_resources_unix)
+- Erica-Gamets-GREP-Cheat-Sheet.pdf
+- Haddock_and_Dunn_quickguide_Appendices.pdf
+- unix_cheat_sheet.pdf
+- Bradnam and Korf Unix and Perl primer (Unix portion, parts 1 and 2) http://korflab.ucdavis.edu/Unix_and_Perl/current.html
+
+
 ## 1. Process monitoring with `top`, killing jobs
 `top` will display information on processes running on the machine you are logged into. Try it, read the output carefully.
 
