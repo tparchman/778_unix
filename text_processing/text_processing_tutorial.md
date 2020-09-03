@@ -21,7 +21,7 @@
 
 `ps aux | grep [search expression]` will pipe processes listed as above into `grep`, and can be used to locate PIDs for specific applications, users, etc. For example, the below command should retrieve information on processes running associated with TextWrangler.
 
-    $ ps aux | grep TextWrangler
+    $ ps aux | grep jot
 
     $ ps aux | grep tparchman
 
@@ -37,7 +37,11 @@ If you are calling a command that is going to take some time, and you dont want 
 
 ## 2. Practice running a program, running it in the background, and stopping it (in other words, job control)
 
-`jot` is a little program that can generate strings of numbers, among other things (have a look at the `jot` `man` page). Try the following command which will print 100 random numbers:
+`jot` is a little program that can generate strings of numbers, among other things (have a look at the `jot` `man` page). The virtual machines many of you are using will not have `jot` installed, but you can install it quickly using `apt`, which is described in more detail towards the end of this tutorial. For now, just execute the below command to get `jot` running:
+
+    $ sudo apt install athena-jot
+
+Try the following command which will print 100 random numbers:
 
     $ jot -r 100
 
@@ -241,7 +245,8 @@ This script can then be executed from the current directory:
 
 **A. Linux distributions:**
 
-`apt` is a package management system for most Linux distributions. It facilitates the installation, management, updates, and removal of software. 
+`apt` is a package management system for most Linux distributions. It facilitates the installation, management, updates, and removal of software. Using apt-get requires superuser privileges (`sudo`), and will require password entry.
+
 
 You can find useful tutorials on `apt` and `apt-get` below. We suggest reviewing information, and familiarizing yourself with `sudo` carefully before using.
 
