@@ -4,11 +4,9 @@
 - running jobs in the background
 - killing jobs
 
-## Useful resources under 
-- [extra_resources_unix](https://github.com/tparchman/778_unix/tree/master/extra_resources_unix)
-- Erica-Gamets-GREP-Cheat-Sheet.pdf
-- Haddock_and_Dunn_quickguide_Appendices.pdf
-- unix_cheat_sheet.pdf
+## Useful resources  
+- [extra_resources_unix](https://github.com/tparchman/778_unix/tree/master/extra_resources_unix) on Github page, including 'grep' and Unix general "cheat" sheets.
+
 - Bradnam and Korf Unix and Perl primer (Unix portion, parts 1 and 2) http://korflab.ucdavis.edu/Unix_and_Perl/current.html
 
 
@@ -17,11 +15,7 @@
 
     $ top
 
-`ps` will show your active process ids. Try it.
-
-    $ ps
-
-`ps aux` will show all active processes. Here `a`, `u`, and `x` are separate command line arguments, see `man ps` for details.
+`ps aux` will show all active processes. Here `a`, `u`, and `x` are separate command line arguments, see `man ps` for details and for explanation of output categories.
 
     $ ps aux
 
