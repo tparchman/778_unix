@@ -180,9 +180,9 @@ In addition, you will want to learn what the `tr` command does.
 
 ## 1. Permissions
 
-As Unix systems are  multi-user, the control of permissions on directories and files is critical for security, privacy, and collaboration. Typing `ls -l` (or `ll` depending on how you modified your bash_profile) will show you the permissions associated with files in your current directory.
+As Unix systems are  multi-user, the control of permissions on directories and files is critical for security, privacy, and collaboration. Typing `ls -lh` will show you the permissions associated with files in your current directory along with other useful information.
 
-    $ ll -h
+    $ ls -lh
 
     -rw-rw-r--.  1 parchman parchman  51G Jul 25  2017 J1b.clean.fastq
     -rw-rw-r--.  1 parchman parchman  51G Jul 22  2017 J1.clean.fastq
