@@ -2,16 +2,30 @@
 
 ## Materials to review before the Saturday workshop
 
-See webcampus 
+Please install all software detailed in [this document](https://unr.canvaslms.com/courses/57767/modules/items/1380103)
 
 ## Morning Session Agenda
 
 * 09:00 a.m. Welcome (ML, TP), introduction to Unix/Linux (ML), tech troubleshooting (all instructors)
 * 09:30 a.m. Basic navigation from the command line (ML)
+	* Live session w/ introduction & instructions
+	* [Video](https://unr.canvaslms.com/courses/57767/modules/items/1380098) explaining navigation & basic unix commands (follow along w/ exercises)
+	* As time permits: Software carpentry exercises on navigation, found [here](https://swcarpentry.github.io/shell-novice/02-filedir/index.html). See if you can answer all the <span style="color:orange">questions in orange</span>.
 * 10:30 a.m. Break
 * 10:45 a.m. Networking (ML)
+	* Live session w/ instructions
+	* [Video](https://unr.canvaslms.com/courses/57767/modules/items/1380101) explaining remote access (follow along w/ exercises).
+	* **NOTE: All sessions from here on will be conducted on the virtual machines for class**
 * 11:15 a.m. File & folder manipulations (ML)
+	* Live session w/ instructions
+	* [Video](https://unr.canvaslms.com/courses/57767/modules/items/1380099) explaining file manipulations: viewing, copying, moving, deleting, etc (follow along w/ exercises)
+	* As time permits: Software carpentry exercises on working with files and directories, found [here](https://swcarpentry.github.io/shell-novice/03-create/index.html). See if you can answer all the <span style="color:orange">questions in orange</span>.
 * 12:00 noon Basic Scripting (ML)
+	* Video for scripting (separate videos for [Mac](https://unr.canvaslms.com/courses/57767/modules/items/1382227) and [Windows](https://unr.canvaslms.com/courses/57767/modules/items/1382226))
+	* Note for Mac users: if you have downloaded a text editor such as SublimeText or Atom, you don't need to use Textedit, and line endings will be handled correctly without any fuss. 
+	* **Complete your first webcampus assignment, [here]** Note that this is part of the basis for your grade in the class! 
+		* This assignment can be completed locally, on your home computer. Copy the text of the script you write into the assignment on webcampus. 
+		* For an extra challenge (not part of the assignment), try to use a command-line-based text editor (nano) to copy the script to your VM, and run it there. 
 * 12:30 p.m. Lunch break
 
 ## Afternoon Agenda
