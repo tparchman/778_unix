@@ -18,8 +18,8 @@ See webcampus
 For the afternoon session we will have several short live slide presentations followed by time allocated to working through the text_processing_tutorial.md in [GitHub repository text_processing directory](https://github.com/tparchman/778_unix/tree/master/text_processing), which would be best viewed online.
 
 ### Approximate time agenda:
-* 1:00 p.m. Basic process monitoring and control
-* 1:30 p.m. Unix tools for text processing
-* 2:15 p.m. Permissions and package installation
+* 1:00 p.m. Package installation; Basic process monitoring and control
+* 1:45 p.m. Unix tools for text processing
+* 2:30 p.m. Permissions 
 
 ## Tracking points for Module Credit
