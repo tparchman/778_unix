@@ -23,3 +23,5 @@ For the afternoon session we will have several short live slide presentations fo
 * 2:30 p.m. Permissions 
 
 ## Tracking points for Module Credit
+
+On Webcampus, you will find two very short assignments that must be completed to receive credir for the module. They are listed under "Workshop 1", as "Module 1: Intro to Linux - Script 1" and "Module 1: Intro to Linux - grep command assignment". 
