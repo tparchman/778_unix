@@ -35,6 +35,7 @@ Note, the above doesnt remove configuration files associated with a package. To 
 `yum` manages and installs packages on Red Hat and CentOS Linux.
 
 - https://www.cyberciti.biz/faq/rhel-centos-fedora-linux-yum-command-howto/
+<p>&nbsp;</p>
 
 # II. Basic process monitoring and control
 ## Topics to cover
@@ -93,7 +94,7 @@ After you identify the job id (e.g., 77654), you can stop it:
 
     $ kill 77564
 
-# II. Unix text processing 
+# III. Unix text processing 
 
 ## Topics to cover
 
@@ -208,11 +209,11 @@ In addition, you will want to learn what the `tr` command does.
 
 
 
-# III. Permissions, package installation
+# IV. Permissions
 
-## 1. Permissions
 
-As Unix systems are  multi-user, the control of permissions on directories and files is critical for security, privacy, and collaboration. Typing `ls -lh` will show you the permissions associated with files in your current directory along with other useful information.
+
+As Linux systems are  multi-user, the control of permissions on directories and files is critical for security, privacy, and collaboration. Typing `ls -lh` will show you the permissions associated with files in your current directory along with other useful information.
 
     $ ls -lh
 
