@@ -23,7 +23,7 @@ Please install all software detailed in [this document](https://unr.canvaslms.co
 * 12:00 noon Basic Scripting (ML)
 	* Video for scripting (separate videos for [Mac](https://unr.canvaslms.com/courses/57767/modules/items/1382227) and [Windows](https://unr.canvaslms.com/courses/57767/modules/items/1382226))
 	* Note for Mac users: if you have downloaded a text editor such as SublimeText or Atom, you don't need to use Textedit, and line endings will be handled correctly without any fuss. 
-	* **Complete your first webcampus assignment, [here]** Note that this is part of the basis for your grade in the class! 
+	* **Complete your first webcampus assignment, [here](https://unr.canvaslms.com/courses/57767/modules/items/1381089)** Note that this is part of the basis for your grade in the class! 
 		* This assignment can be completed locally, on your home computer. Copy the text of the script you write into the assignment on webcampus. 
 		* For an extra challenge (not part of the assignment), try to use a command-line-based text editor (nano) to copy the script to your VM, and run it there. 
 * 12:30 p.m. Lunch break
