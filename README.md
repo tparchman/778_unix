@@ -34,8 +34,14 @@ For the afternoon session we will have several short live slide presentations fo
 
 ### Approximate time agenda:
 * 1:00 p.m. Package installation; Basic process monitoring and control
+	* Sections I and II of the [tutorial](https://github.com/tparchman/778_unix/tree/master/text_processing)
+	* Includes a package installation and job control exercise using `jot`
 * 1:45 p.m. Unix tools for text processing
+	* Sections III of the [tutorial](https://github.com/tparchman/778_unix/tree/master/text_processing)
+	* `grep` examples relate to module 1 assignment number 2.
 * 2:30 p.m. Permissions 
+	* Section IV of the [tutorial](https://github.com/tparchman/778_unix/tree/master/text_processing)
+
 
 ## Tracking points for Module Credit
 
