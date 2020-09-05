@@ -1,14 +1,46 @@
-# I. Basic process monitoring and control
+
+## I. Package installation
+
+**A. Linux distributions:**
+
+`apt` is a package management system for most Linux distributions. It facilitates the installation, management, updates, and removal of software. Using apt-get requires superuser privileges (`sudo`), and will require password entry.
+
+
+You can find useful tutorials on `apt` and `apt-get` below. We suggest reviewing information, and familiarizing yourself with `sudo` carefully before using.
+
+- https://phoenixnap.com/kb/how-to-use-apt-get-commands
+- https://itsfoss.com/apt-get-linux-guide/
+- https://www.control-escape.com/linux/lx-swinstall.html
+
+
+To install software using `apt-get`:
+
+    $ sudo apt-get install <package_name>
+
+To remove software using `apt-get`:
+
+    $ sudo apt-get remove <package_name> 
+
+Note, the above doesnt remove configuration files associated with a package. To remove the package along and configuration files:
+
+    $ sudo apt-get purge <package_name> 
+
+
+**B. Unix on Mac Unix and CentOS Linux systems**
+
+`homebrew` manages and installs packages on Mac OS Unix. A basic tutorial can be found below. As with the above, carefully review before using.
+
+- https://www.howtogeek.com/211541/homebrew-for-os-x-easily-installs-desktop-apps-and-terminal-utilities/
+
+`yum` manages and installs packages on Red Hat and CentOS Linux.
+
+- https://www.cyberciti.biz/faq/rhel-centos-fedora-linux-yum-command-howto/
+
+# II. Basic process monitoring and control
 ## Topics to cover
 - monitoring processes, identifying process ids
 - running jobs in the background
 - killing jobs
-
-## Useful resources  
-- [extra_resources_unix](https://github.com/tparchman/778_unix/tree/master/extra_resources_unix) on Github page, including 'grep' and Unix general "cheat" sheets.
-
-- Bradnam and Korf Unix and Perl primer (Unix portion, parts 1 and 2) http://korflab.ucdavis.edu/Unix_and_Perl/current.html
-
 
 ## 1. Process monitoring with `top`, killing jobs
 `top` will display information on processes running on the machine you are logged into. Try it, read the output carefully.
@@ -241,41 +273,8 @@ This script can then be executed from the current directory:
 
     $ ./rsync_mirror_laptop.sh
 
-## 2. Package installation
 
-**A. Linux distributions:**
+# General  Useful resources for the above, and other Unix matters 
+- [extra_resources_unix](https://github.com/tparchman/778_unix/tree/master/extra_resources_unix) on Github page, including 'grep' and Unix general "cheat" sheets.
 
-`apt` is a package management system for most Linux distributions. It facilitates the installation, management, updates, and removal of software. Using apt-get requires superuser privileges (`sudo`), and will require password entry.
-
-
-You can find useful tutorials on `apt` and `apt-get` below. We suggest reviewing information, and familiarizing yourself with `sudo` carefully before using.
-
-- https://phoenixnap.com/kb/how-to-use-apt-get-commands
-- https://itsfoss.com/apt-get-linux-guide/
-- https://www.control-escape.com/linux/lx-swinstall.html
-
-
-To install software using `apt-get`:
-
-    $ sudo apt-get install <package_name>
-
-To remove software using `apt-get`:
-
-    $ sudo apt-get remove <package_name> 
-
-Note, the above doesnt remove configuration files associated with a package. To remove the package along and configuration files:
-
-    $ sudo apt-get purge <package_name> 
-
-
-**B. Unix on Mac systems**
-
-`homebrew` and `fink` are each capable of managing and installing packages on Unix running on the Mac OS. Some basic tutorials can be found below. As with the above, carefully review before using.
-
-Fink:
-- https://www.finkproject.org/doc/install/install-first.php?phpLang=en
-
-
-Homebrew:
-
-- https://www.howtogeek.com/211541/homebrew-for-os-x-easily-installs-desktop-apps-and-terminal-utilities/
+- Bradnam and Korf Unix and Perl primer (Unix portion, parts 1 and 2) http://korflab.ucdavis.edu/Unix_and_Perl/current.html
