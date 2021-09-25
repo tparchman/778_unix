@@ -20,14 +20,15 @@ For the morning session, much of the class will be done at your own pace, potent
 	* **NOTE: All sessions from here on will be conducted on the virtual machines for class**
 * 11:15 a.m. File & folder manipulations (ML)
 	* Live session w/ instructions
-	* [Video](https://unr.canvaslms.com/courses/74884/modules/items/1788080) explaining file manipulations: viewing, copying, moving, deleting, etc (follow along w/ exercises)
+	* [Video](https://www.youtube.com/watch?v=dOqSkX85h98) explaining file manipulations: viewing, copying, moving, deleting, etc (follow along w/ exercises)
 	* As time permits: Software carpentry exercises on working with files and directories, found [here](https://swcarpentry.github.io/shell-novice/03-create/index.html). See if you can answer all the <span style="color:orange">questions in orange</span>.
 * 12:00 noon Basic Scripting (ML)
-	* Video for scripting (separate videos for [Mac](https://unr.canvaslms.com/courses/74884/modules/items/1788081) and [Windows](https://unr.canvaslms.com/courses/74884/modules/items/1788082))
+	* Video for scripting (separate videos for [Mac](https://www.youtube.com/watch?v=tgeTaSO2kzU) and [Windows](https://www.youtube.com/watch?v=YMbMsz8veLs))
 	* Note for Mac users: if you have downloaded a text editor such as SublimeText or Atom, you don't need to use Textedit, and line endings will be handled correctly without any fuss. 
 	* **Complete your first webcampus assignment, [here](https://unr.canvaslms.com/courses/74884/assignments/846663)** Note that this is part of the basis for your grade in the class! 
 		* This assignment can be completed locally, on your home computer. Copy the text of the script you write into the assignment on webcampus. 
 		* For an extra challenge (not part of the assignment), try to use a command-line-based text editor (nano) to copy the script to your VM, and run it there. 
+* If you finish early, try to work through the extra exercises on [this page](https://github.com/tparchman/778_unix/tree/master/extra_exercises/morning_exercises.md) (these are not for class credit, just practical applications of some of the things we've taught today)
 * 12:30 p.m. Lunch break
 
 ## Afternoon Agenda
