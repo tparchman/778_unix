@@ -52,7 +52,7 @@ Note, the above doesnt remove configuration files associated with a package. To 
 
     $ ps aux
 
-`ps aux | grep [search expression]` will pipe processes listed as above into `grep`, and can be used to locate PIDs for specific applications, users, etc. For example, the below command should retrieve information on processes running associated with TextWrangler.
+`ps aux | grep [search expression]` will pipe processes listed as above into `grep`, and can be used to locate PIDs for specific applications, users, etc. For example, the below command should retrieve information on processes running associated with jot.
 
     $ ps aux | grep jot
 
