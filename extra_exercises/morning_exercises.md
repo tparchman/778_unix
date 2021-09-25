@@ -31,5 +31,5 @@ Try to install the following tools (e.g. `sudo apt install tree`), and explore t
 * rename (renames many files at once)
 * ncdu (shows how large files in a directory are, in an interactive interface)
 
-## rename exercise
+## `rename` exercise
 rename is a really powerful tool for renaming many files at once. For example, you could change all .txt files in a directory to have some extra component of their file name, e.g. changing <whatever_file>.txt to <whatever file>_version_01.txt As an exercise, try using `rename` to rename all the .txt files in shell-lesson-data/north-pacific-gyre/2012-07-03/ to add _ver01.txt to the end of them (hint: you'll be replacing .txt with _ver01.txt in the file names). 
